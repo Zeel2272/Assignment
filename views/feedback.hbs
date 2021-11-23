@@ -64,26 +64,31 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             <div class="thanks-msg">Thank you for your feedback !!!</div>
             <div class="star-input">
                 <input type="radio" name="rating" id="rating-5">
-                <label for="rating-5" class="fas fa-star submit-rating"></label>
+                <label for="rating-5" class="fas fa-star"></label>
                 <input type="radio" name="rating" id="rating-4">
-                <label for="rating-4" class="fas fa-star submit-rating"></label>
+                <label for="rating-4" class="fas fa-star"></label>
                 <input type="radio" name="rating" id="rating-3">
-                <label for="rating-3" class="fas fa-star submit-rating "></label>
+                <label for="rating-3" class="fas fa-star"></label>
                 <input type="radio" name="rating" id="rating-2">
-                <label for="rating-2" class="fas fa-star submit-rating"></label>
+                <label for="rating-2" class="fas fa-star"></label>
                 <input type="radio" name="rating" id="rating-1">
-                <label for="rating-1" class="fas fa-star submit-rating"></label>
+                <label for="rating-1" class="fas fa-star"></label>
 
                 <!-- Rating Submit Form -->
-                
+                <form>
+                    <span class="rating-reaction"></span>
+                    <button type="submit" class="submit-rating">Submit</button>
+                </form>
             </div>
         </div>
         <script>
             const btn = document.querySelector(".submit-rating");
+            const thanksmsg = document.querySelector(".thanks-msg");
             const starRating = document.querySelector(".star-input");
             // Success message 
             btn.onclick = () => {
                 starRating.style.display = "none";
+                thanksmsg.style.display = "table";
                 return false;
             };
         </script>
