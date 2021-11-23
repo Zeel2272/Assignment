@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<body>
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Image on the side with square -->
+  <img src="http://localhost:3000/images/myphoto.JPG" style="width:100%">
+  <a href="/#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="/#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="/#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <center><p>WORK</p></center>
+  </a>
+  
+  <a href="/#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+
+  <a href="/feedback" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>FEEDBACK</p>
+  </a>
+ 
+</nav>
+ <center><h2>This feedback is very helpful for me, so as to make any changes. With the help of the given ratings I can manage to do so. Kindly give me your honest ratings.</h2></center>
+        <ul>
+            <li> 1 - I Hate It. </li>
+            <li> 2 - I Don't Like It. </li>
+            <li> 3 - It is Good. </li>
+            <li> 4 - I Like It. </li>
+            <li> 5 - I Love It. </li>
+        </ul>
+        <div class="star-rating">
+            <div class="thanks-msg">Thank you for your feedback !!!</div>
+            <div class="star-input">
+                <input type="radio" name="rating" id="rating-5">
+                <label for="rating-5" class="fas fa-star"></label>
+                <input type="radio" name="rating" id="rating-4">
+                <label for="rating-4" class="fas fa-star"></label>
+                <input type="radio" name="rating" id="rating-3">
+                <label for="rating-3" class="fas fa-star"></label>
+                <input type="radio" name="rating" id="rating-2">
+                <label for="rating-2" class="fas fa-star"></label>
+                <input type="radio" name="rating" id="rating-1">
+                <label for="rating-1" class="fas fa-star"></label>
+
+                <!-- Rating Submit Form -->
+                <form>
+                    <span class="rating-reaction"></span>
+                    <button type="submit" class="submit-rating">Submit</button>
+                </form>
+            </div>
+        </div>
+        <script>
+            const btn = document.querySelector(".submit-rating");
+            const thanksmsg = document.querySelector(".thanks-msg");
+            const starRating = document.querySelector(".star-input");
+            // Success message 
+            btn.onclick = () => {
+                starRating.style.display = "none";
+                thanksmsg.style.display = "table";
+                return false;
+            };
+        </script>
+</body>
+</html>
